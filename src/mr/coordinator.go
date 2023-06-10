@@ -145,7 +145,7 @@ func (c *Coordinator) initMapPhase() {
 func (c *Coordinator) initReducePhase() {
 	c.tasks[i] = make([]Task, c.nReduce)
 	c.taskCh = make(chan Task, c.nReduce)
-	for i = 0; i < c.nReduce; i++ {
+	for i := 0; i < c.nReduce; i++ {
 		c.tasks[i] := Task {
 			Id: i,
 			NMap: c.nMap,
